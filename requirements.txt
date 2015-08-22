@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+#
+# This file is part of Nutrition Parser
+# Copyright (C) 2015 Lars Holm Nielsen.
+#
+# Nutrition Parser is free software; you can redistribute it and/or
+# modify it under the terms of the Revised BSD License; see LICENSE
+# file for more details.
+
+# Requirements file for development installs
+-e .
+
+# Requirements for building documentation, running tests and making releases
+Sphinx
+wheel
+twine
+pep257
+tox
+sphinx-pypi-upload

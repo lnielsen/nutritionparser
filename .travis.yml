@@ -1,0 +1,44 @@
+# This file is part of Nutrition Parser
+# Copyright (C) 2015 Lars Holm Nielsen.
+#
+# Nutrition Parser is free software; you can redistribute it and/or
+# modify it under the terms of the Revised BSD License; see LICENSE
+# file for more details.
+
+sudo: false
+
+language: python
+
+python:
+  - "3.4"
+  - "3.3"
+  - "2.7"
+  - "pypy"
+
+cache:
+  - pip
+
+install:
+  # Install test dependencies
+  - "travis_retry pip install coveralls pep257 Sphinx twine wheel"
+  - "travis_retry pip install pytest pytest-pep8 pytest-cov pytest-cache"
+  - "travis_retry pip install ."
+  - "mkdir data && cd data && wget https://www.ars.usda.gov/SP2UserFiles/Place/12354500/Data/SR27/dnload/sr27asc.zip && unzip sr27asc.zip && cd .."
+
+script: ./run-tests.sh
+
+after_success:
+  - coveralls
+
+notifications:
+  email: false
+
+deploy:
+  provider: pypi
+  user: lnielsen
+  password:
+    secure: CHANGEME
+  distributions: "sdist bdist_wheel"
+  on:
+    tags: true
+    python: "2.7"
