@@ -2,7 +2,7 @@
  Nutrition Parser v0.1.0
 =========================
 
-Nutrition Parser v0.1.0 was released on 2015-08-22
+Nutrition Parser v0.1.0 was released on 2015-08-23
 
 About
 -----
@@ -14,9 +14,6 @@ Installation
 ------------
 
    $ pip install nutritionparser
-
-What's new
-----------
 
 Documentation
 -------------
