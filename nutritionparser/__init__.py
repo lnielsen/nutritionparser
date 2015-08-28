@@ -84,7 +84,7 @@ You can also inspect the fields available for each file:
     NDB_No
     FdGrp_Cd
     ...
-    FdGrp_Desc
+    CHO_Factor
 
 Full documentation for each fields is available in the included POF file of the
 data.

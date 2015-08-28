@@ -19,7 +19,7 @@ from os.path import basename
 
 PY2 = sys.version_info[0] == 2
 
-delimiter = '~'.encode('ascii') if PY2 else "^"
+delimiter = '^'.encode('ascii') if PY2 else "^"
 quotechar = '~'.encode('ascii') if PY2 else '~'
 
 
@@ -73,8 +73,6 @@ sr27fields = {
         'Pro_Factor',
         'Fat_Factor',
         'CHO_Factor',
-        'FdGrp_Cd',
-        'FdGrp_Desc',
     ],
     'FD_GROUP.txt': [
         'FdGrp_Cd',
